@@ -1,0 +1,324 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0,0), rgba(0, 0, 0,0)),url("./7309906_3580293.jpg") center/cover no-repeat;
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    color: #5D48B8;
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background:linear-gradient(135deg rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+.chat-container .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 25px;
+    color: white;
+    padding: 50px;
+}
+.chat-container form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+.chat-container input{
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid white;
+}
+#user-input {
+    width: 80%;
+    padding: 8px;
+    margin-right: 5px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#button {
+    padding: 8px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: #F8B9D4;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #BD1877;
+}
+.base{
+    background-color: #BD1877;
+    margin: -140px 50px;
+    box-shadow: 5px 5px 2px 1px rgba(189, 24,119, 0.5);
+    position: fixed;
+    width: 90%;
+    z-index: 9999999;
+}
+.navbar a img{
+    height: 50px;
+    border-radius: 50%;
+}
+.navbar-nav{
+    margin-left: 10%;
+    gap: 20%;
+}
+/* .carousel {
+    height: 30rem;
+}
+  
+.carousel-inner {
+    height: 100%;
+}
+  
+.carousel-item {
+    height: 30rem;
+} */
+.slider-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    margin-top: 10%;
+    position: relative;
+    width: 45rem;
+    height: 25rem;
+    transform-style: preserve-3d;
+    animation: rotate 60s linear infinite;
+    margin-bottom: 100px;
+}
+@keyframes rotate {
+    0%{
+        transform: perspective(3000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(3000px) rotateY(360deg);
+    }
+}
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*90deg)) translateZ(600px);
+}
+.slider span div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 10s;
+    transform-style: preserve-3d;
+}
+.services{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../static/pexels-johannes-plenio-1103970.jpg") center/cover no-repeat;
+    text-align: center;
+    padding: 15% 10%;
+    transform-style: preserve-3d;
+    color: white;
+}
+.services h2{
+    margin-bottom: 20px;
+}
+.tools h2{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.tools img{
+    height: 70px;
+    border-radius: 50%;
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+.items div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.items img{
+    border-radius: 20px;
+}
+h1,h2{
+    color: white;
+    text-align: center;
+}
+h1{
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.dialog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dialog-container .chat-container{
+    color: #FFCBE6;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    text-align: center;
+    padding-top: 5%;
+}
+.chat-container img{
+    border-radius: 50%;
+}
+h2{
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+.navbar input{
+    background-color: #5D48B8;
+    border: none;
+    outline: none;
+    padding:5px 25px;
+    color: #F8B9D4;
+}
+.login{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 2.5rem;
+    padding-bottom: 2rem;
+}
+.login input{
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 20rem;
+    height: 3rem;
+    padding: 0px 20px;
+}
+.login h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.login .button{
+    width: 7rem;
+    background-color: #007bff;
+    color: #F8B9D4;
+    padding: 3px 5px;
+}
+.login div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.login div a{
+    color: #F8B9D4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+.login div img{
+    height: 15px;
+}
+.form-select{
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 20rem;
+    height: 3rem;
+    padding: 0px 20px;
+    color: white;
+}
+.footer{
+    margin-top: 150px;
+    padding: 60px;
+    margin-bottom: 10px;
+}
+.footer span{
+    color: white;
+}
+footer img{
+    height: 30px;
+}
+.legal .navbar{
+    background-color: #BD1877;
+    margin: -190px 50px;
+    box-shadow: 5px 5px 2px 1px rgba(189, 24,119, 0.5);
+    position: fixed;
+    width: 90%;
+    z-index: 9999999;
+}
+.legal .chat-container{
+    margin-top: 200px;
+}
+.legal .footer{
+    margin-top: 120px;
+    padding: 30px;
+}
+.legal .chat-container .please{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    margin-top: 30px;
+}
+.legal .chat-container .please input{
+    width: 300px;
+}
+.legal .chat-container .please #button{
+    padding: 5px 20px;
+    width: 100px;
+}
+.legal .chat-container h2{
+    margin-top: 20px;
+    color: #BD1877;
+    margin-bottom: 10px;
+}
+.legal .chat-container{
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
